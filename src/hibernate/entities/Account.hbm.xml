@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="hibernate.entities">
+
+    <class name="Account" table="ACCOUNTS" >
+        <id name="id" type="java.lang.Integer" >
+            <column name="ID" />
+            <!-- 指定主键的生成方式, native: 使用数据库底层方式 -->
+            <generator class="native" />
+        </id>
+        <property name="username" type="java.lang.String" column="USER_NAME"/>
+        <property name="balance" type="int" column="BALANCE"/>
+    </class>
+</hibernate-mapping>

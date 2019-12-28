@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="hibernate.entities">
+
+    <class name="Book" table="BOOKS">
+        <id name="id" type="java.lang.Integer" >
+            <column name="ID" />
+            <!-- 指定主键的生成方式, native: 使用数据库底层方式 -->
+            <generator class="native" />
+        </id>
+        <property name="isbn" type="java.lang.String" column="ISBN"/>
+        <property name="bookName" type="java.lang.String" column="BOOK_NAME"/>
+        <property name="price" type="int" column="PRICE"/>
+        <property name="stock" type="int" column="STOCK"/>
+    </class>
+</hibernate-mapping>
